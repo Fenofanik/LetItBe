@@ -1,0 +1,4 @@
+#Sun Jun 27 15:11:36 EEST 2021
+base.0=D\:\\Urino\\build\\app\\intermediates\\dex\\debug\\mergeDexDebug\\classes.dex
+renamed.0=classes.dex
+path.0=classes.dex
