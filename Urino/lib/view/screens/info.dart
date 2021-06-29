@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:urino/config/constant_routes.dart';
 import 'package:urino/core/ui/states/base_stateless_screen.dart';
+import 'package:urino/core/utils/appBar.dart';
 import 'package:urino/src/borders.dart';
 import 'package:urino/src/button_style.dart';
 import 'package:urino/src/text_styles.dart';
@@ -47,14 +48,14 @@ class InfoScreen extends BaseStatelessScreen {
                         padding: const EdgeInsets.only(right: 12,top: 8,bottom: 8),
                         child: Column(
                           children: <Widget>[
-                            Text('ID$doctorId',style: namesValues,),
+                            Text(doctorId,style: namesValues,),
                             Padding(
                               padding: const EdgeInsets.only(top:12),
-                              child: Text('ID$patientId',style: namesValues,),
+                              child: Text(patientId,style: namesValues,),
                             ),
                             Padding(
                               padding: const EdgeInsets.only(top:12),
-                              child: Text('ID$deviceId',style: namesValues,),
+                              child: Text(deviceId,style: namesValues,),
                             )
                           ],
                         ),
@@ -78,5 +79,10 @@ class InfoScreen extends BaseStatelessScreen {
         ),
       ),
     );
+  }
+
+  @override
+  PreferredSizeWidget? buildAppBar(BuildContext context) {
+    return getAppBar(context, "Doctor");
   }
 }

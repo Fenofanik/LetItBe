@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:urino/core/controllers/splash_controller.dart';
 import 'package:urino/core/ui/states/base_stateless_screen.dart';
 import 'package:get/get.dart';
+import 'package:urino/core/utils/appBar.dart';
 import 'package:urino/src/text_styles.dart';
 
 class SplashScreen extends BaseStatelessScreen {
@@ -17,7 +18,9 @@ class SplashScreen extends BaseStatelessScreen {
       ),
     );
   }
-  PreferredSizeWidget? buildAppBar(BuildContext context){
-    PreferredSize(child: Container(), preferredSize: Size(0.0,0.0));
+
+  @override
+  PreferredSizeWidget? buildAppBar(BuildContext context) {
+    return Container()
   }
 }

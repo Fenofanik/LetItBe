@@ -10,7 +10,7 @@ class AppPages{
   static final routes = [
     GetPage(name: '/', page: () => SplashScreen()),
     GetPage(name: '/start', page: () => StartScreen()),
-    GetPage(name: '/info', page: () => InfoScreen(doctorId:'',deviceId:'',patientId:'',)),
+    GetPage(name: '/info', page: () => InfoScreen(doctorId:'',deviceId:'',patientId:'')),
     GetPage(name: '/edit', page: () => EditScreen()),
     GetPage(name: '/reg', page: () => RegistrationScreen()),
   ];

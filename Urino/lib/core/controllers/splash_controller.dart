@@ -5,7 +5,6 @@ import 'package:urino/config/constant_routes.dart';
 class SplashController extends GetxController{
   final splashDelay = 3;
 
-
   @override
   void onInit() {
     super.onInit();
@@ -16,7 +15,7 @@ class SplashController extends GetxController{
     return Timer(_duration, navigationPage);
   }
   void navigationPage() {
-    Get.toNamed(start); //onBoarding  //bottomNavBar //otp //testCategory
+    Get.toNamed(start); //
   }
 
   @override

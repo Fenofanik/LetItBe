@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:urino/config/constant_routes.dart';
 import 'package:urino/core/ui/states/base_stateless_screen.dart';
+import 'package:urino/core/utils/appBar.dart';
 import 'package:urino/src/button_style.dart';
 import 'package:get/get.dart';
 import 'package:urino/src/text_styles.dart';
@@ -23,6 +24,7 @@ class StartScreen extends BaseStatelessScreen {
                   child: Text('Doctor'),
                   onPressed: () {
                     Get.toNamed(registration);
+
                   },),
               ),
             Padding(
@@ -41,7 +43,9 @@ class StartScreen extends BaseStatelessScreen {
         ),
       );
   }
-  PreferredSizeWidget? buildAppBar(BuildContext context){
-    PreferredSize(child: Container(), preferredSize: Size(0.0,0.0));
+
+  @override
+  PreferredSizeWidget? buildAppBar(BuildContext context) {
+    return PreferredSize(child: Container(), preferredSize: Size(0.0, 0.0));
   }
 }

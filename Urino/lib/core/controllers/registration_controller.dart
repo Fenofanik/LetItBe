@@ -34,13 +34,13 @@ class RegistrationController extends GetxController {
   }
 
   String? validateId(String value) {
-    if (value.length < 4 || value.length >= 5 || value.isAlphabetOnly) {
-      return "Invalid ID";
-       Get.snackbar("Invalid ID", "Please put valid ID",
-          snackPosition: SnackPosition.BOTTOM);
+    if (value.length < 10 || value.length >= 11 || value.isAlphabetOnly) {
+      return "Invalid ID, please put valid ID";
     }
     return null;
   }
+  //  Get.snackbar("Invalid ID", "Please put valid ID",
+   //  snackPosition: SnackPosition.BOTTOM);//
 
   void checkId() {
     final isValid = formKey.currentState!.validate();
@@ -51,6 +51,6 @@ class RegistrationController extends GetxController {
     Get.to(InfoScreen(
         doctorId:doctorId,
         patientId:patientId,
-        deviceId:deviceId));
+        deviceId:deviceId,));
   }
 }
